@@ -17,7 +17,7 @@ import java.util.*;
 
 class Main 
 {  
-  public static String FirstReverse(String str) 
+ /* public static String FirstReverse(String str) 
   { 
     char[] strChars = str.toCharArray();
     char[] reverse = new char[strChars.length];
@@ -31,7 +31,22 @@ class Main
     String backwards = String.valueOf(reverse);
        
     return backwards;
-  } 
+  } */
+
+	//A different way of doing it
+	public static String FirstReverse(String str) 
+	{
+		String rev = "";
+		for(int i =str.length()-1; i >=0; i--)
+		{
+			rev = rev + str.charAt(i);
+		}
+		
+		//And yet another way of doing it, with only one line
+		//return new StringBuilder(str).reverse().toString();
+		return rev;
+	}
+	
   
   public static void main (String[] args) 
   {  
