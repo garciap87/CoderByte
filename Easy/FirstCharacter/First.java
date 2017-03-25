@@ -32,6 +32,7 @@ public class First
 				
 			}
 		}
+		scanner.close();
 
 	}
 
