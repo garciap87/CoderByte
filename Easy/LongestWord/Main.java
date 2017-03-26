@@ -1,26 +1,34 @@
+/**
+ * Using the Java language, have the function LongestWord(sen) take the sen 
+ * parameter being passed and return the largest word in the string. If there
+ * are two or more words that are the same length, return the first word from 
+ * the string with that length. Ignore punctuation and assume sen will not be empty
+ */
+
 package LongestWord;
 import java.util.Scanner;
+
 public class Main 
 {
 	public static String LongestWord(String sen) 
 	{ 
-		int smallest = 0;
+		int biggest = 0;
 	    String[] parts = sen.replaceAll("[^a-zA-Z ]", "").split(" ");
-	    String ben = "";
+	    String longestWord = "";
 	    for(int i=0; i<parts.length; i++)
 	    {
-	      if(parts[i].length() > smallest)
+	      if(parts[i].length() > biggest)
 	      {
-	        smallest=parts[i].length();
-	        ben = parts[i];
+	    	biggest=parts[i].length();
+	    	longestWord = parts[i];
 	      }
 	    }
-	    return ben;
-	  } 
+	    return longestWord;
+	} 
 	  
 	  public static void main (String[] args) 
 	  {  
-	    System.out.print("Please enter a string: ");    
+	    System.out.print("Enter a string to find the largest word: ");    
 	    Scanner s = new Scanner(System.in);
 	    System.out.print(LongestWord(s.nextLine())); 
 	    s.close();
