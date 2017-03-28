@@ -10,6 +10,14 @@ import java.util.Scanner;
 
 public class LetterChange 
 {
+	public static void main (String[] args) 
+	 {  
+	   System.out.print("Please entera a string: ");     
+	   Scanner s = new Scanner(System.in);	    
+	   System.out.print(LetterChanges(s.nextLine())); 
+	    s.close();
+	 }   
+	 
 	public static String LetterChanges(String str) 
 	{ 
 		//..........................This way of doing it doens't account for if the character is z or a special character such as *...............
@@ -54,12 +62,4 @@ public class LetterChange
 	    
 	    return updatedString;
 	  } 
-	  
-	  public static void main (String[] args) 
-	  {  
-	    System.out.print("Please entera a string: ");     
-	    Scanner s = new Scanner(System.in);
-	    System.out.print(LetterChanges(s.nextLine())); 
-	    s.close();
-	  }   
 }

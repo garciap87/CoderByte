@@ -10,6 +10,14 @@ import java.util.Scanner;
 
 public class Main 
 {
+	 public static void main (String[] args) 
+	 {  
+		 System.out.print("Enter a string to find the largest word: ");    
+		 Scanner s = new Scanner(System.in);
+		 System.out.print(LongestWord(s.nextLine())); 
+		 s.close();
+	  }  
+	  
 	public static String LongestWord(String sen) 
 	{ 
 		int biggest = 0;
@@ -24,13 +32,5 @@ public class Main
 	      }
 	    }
 	    return longestWord;
-	} 
-	  
-	  public static void main (String[] args) 
-	  {  
-	    System.out.print("Enter a string to find the largest word: ");    
-	    Scanner s = new Scanner(System.in);
-	    System.out.print(LongestWord(s.nextLine())); 
-	    s.close();
-	  }   
+	}  
 }

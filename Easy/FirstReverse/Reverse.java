@@ -15,8 +15,16 @@ Output:"edoC evoL I"
 package FirstReverse;
 import java.util.*; 
 
-class Main 
+class Reverse 
 {  
+	 public static void main (String[] args) 
+	 {  
+	    System.out.print("Please enter a string you want to reverse: "); 
+	    Scanner s = new Scanner(System.in);
+	    System.out.print(FirstReverse(s.nextLine())); 
+	    s.close();
+	 }
+	  
  /* public static String FirstReverse(String str) 
   { 
     char[] strChars = str.toCharArray();
@@ -45,14 +53,5 @@ class Main
 		//And yet another way of doing it, with only one line
 		//return new StringBuilder(str).reverse().toString();
 		return rev;
-	}
-	
-  
-  public static void main (String[] args) 
-  {  
-    System.out.print("Please enter a string you want to reverse: "); 
-    Scanner s = new Scanner(System.in);
-    System.out.print(FirstReverse(s.nextLine())); 
-    s.close();
-  }   
+	}   
 } 
